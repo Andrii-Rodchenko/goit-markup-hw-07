@@ -1,0 +1,16 @@
+.logo-header {
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.logo:hover,
+.logo:focus {
+  color: var(--interactive-element-color);
+}
+
+.logo-web {
+  color: var(--interactive-element-color);
+}
