@@ -86,3 +86,10 @@
 .link-contact:focus {
   color: var(--interactive-element-color);
 }
+
+.link-contact-mail,
+.link-contact-tel {
+  display: flex;
+  margin-right: 10px;
+  fill: currentColor;
+}

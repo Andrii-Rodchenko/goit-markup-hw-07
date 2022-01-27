@@ -1,4 +1,4 @@
-.form-position {
+.form {
   padding-top: 8px;
 }
 
@@ -7,12 +7,12 @@
   justify-content: center;
   align-items: center;
 }
-.form-field {
+.subscription__field {
   position: relative;
   margin-right: 12px;
 }
 
-.label-mailing {
+.subscription__label-mailing {
   display: inline-block;
   position: absolute;
   left: 0;
@@ -23,19 +23,15 @@
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
   transition: transform var(--transition-duration-timing-function);
-}
-
-.subscription-input:focus + .label-mailing,
-.subscription-input:not(:placeholder-shown) + .label-mailing {
+  .subscription__input:focus + &,
+  .subscription__input:not(:placeholder-shown) + & {
   transform: translate(-68px, -50%);
 }
-
-.form-field:focus + .subscription-input,
-.subscription-input:not(:placeholder-shown) {
-  background-color: #ffffff;
 }
 
-.subscription-input {
+
+
+.subscription__input {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -44,6 +40,10 @@
   width: 358px;
   height: 50px;
   transition: background-color var(--transition-duration-timing-function);
+.subscription__field:focus + &,
+&:not(:placeholder-shown) {
+  background-color: #ffffff;
+}
 }
 
 .subscription-button {
@@ -61,19 +61,29 @@
   color: #ffffff;
   cursor: pointer;
   transition: background-color var(--transition-duration-timing-function),
-    color var(--transition-duration-timing-function),
-    background var(--transition-duration-timing-function),
-    box-shadow var(--transition-duration-timing-function);
+  color var(--transition-duration-timing-function),
+  background var(--transition-duration-timing-function),
+  box-shadow var(--transition-duration-timing-function);
   border: 0;
   padding: 0;
+  &:hover {
+  color: #212121;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  fill: #212121;
+}
 }
 
 .subscription-icon {
   margin-left: 10px;
   fill: #ffffff;
   transition: fill var(--transition-duration-timing-function);
+  .subscription-button:hover > & {
+  fill: #212121;
 }
-.form-text {
+}
+.form__text {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -84,14 +94,5 @@
   margin-bottom: 20px;
 }
 
-.subscription-button:hover {
-  color: #212121;
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  fill: #212121;
-}
 
-.subscription-button:hover > .subscription-icon {
-  fill: #212121;
-}
+

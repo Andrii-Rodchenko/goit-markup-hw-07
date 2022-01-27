@@ -1,40 +1,17 @@
-.benefits-list {
+.benefits {
   display: flex;
   padding-left: 0;
 }
-.benefits-list .benefits-title {
+.benefits__title {
   margin-bottom: 10px;
 }
 
-.benefits-list .benefits-item:not(:last-child) {
-  margin-right: 30px;
-}
 
-.benefits-list .benefits-item {
+
+.benefits__item {
   width: 270px;
   list-style-type: none;
-}
-
-.benefits-title {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--title-text-color);
-}
-
-.benefits-text {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--paragraph-text-color);
-}
-
-// подключение изображения
-
-.benefits-item::before {
+  &::before {
   display: block;
   content: '';
   height: 120px;
@@ -45,6 +22,30 @@
   border-radius: 4px;
   margin-bottom: 30px;
 }
+&:not(:last-child) {
+  margin-right: 30px;
+}
+}
+
+.benefits__title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+}
+
+.benefits__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--paragraph-text-color);
+}
+
+// подключение изображения
+
 .benefits-item-antenna::before {
   background-image: url(../images/antenna.svg);
 }

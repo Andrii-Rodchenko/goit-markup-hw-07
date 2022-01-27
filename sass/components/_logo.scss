@@ -1,16 +1,20 @@
-.logo-header {
-  font-family: Raleway, sans-serif;
+.logo {font-family: Raleway, sans-serif;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03em;}
+
+.logo--header {
   color: var(--title-text-color);
 }
-.logo:hover,
-.logo:focus {
-  color: var(--interactive-element-color);
+
+.logo--footer {
+  display: inline-block;
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
 }
 
-.logo-web {
+.logo__web {
   color: var(--interactive-element-color);
 }

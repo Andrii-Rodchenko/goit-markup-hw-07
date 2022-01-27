@@ -4,11 +4,11 @@
   margin-bottom: 50px;
   padding-left: 0;
 }
-.list-btn .item:not(:last-child) {
+.list-btn__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.button-item {
+.filter-button {
   border-radius: 4px;
   border: 0;
   padding: 6px 22px;
@@ -21,14 +21,13 @@
   background: #f5f4fa;
   cursor: pointer;
   transition: background-color var(--transition-duration-timing-function),
-    color var(--transition-duration-timing-function),
-    background var(--transition-duration-timing-function),
-    box-shadow var(--transition-duration-timing-function);
-}
-
-.button-item:hover {
+  color var(--transition-duration-timing-function),
+  background var(--transition-duration-timing-function),
+  box-shadow var(--transition-duration-timing-function);
+  &:hover {
   color: #ffffff;
   background: #2196f3;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+}
 }

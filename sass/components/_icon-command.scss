@@ -1,11 +1,11 @@
-.list-command-icon {
+.command-icon-list{
   display: flex;
   list-style: none;
   justify-content: center;
   padding: 0px 30px 30px 32px;
 }
 
-.link-command-icon {
+.command-icon-list__link {
   background-color: #ffffff;
   width: 44px;
   height: 44px;
@@ -16,20 +16,18 @@
   color: #afb1b8;
   transition: color var(--transition-duration-timing-function),
     background-color var(--transition-duration-timing-function);
+&:hover,
+&:focus {
+  background-color: #2196f3;
+  color: #ffffff;
 }
+  }
 
-.svg-command-icon {
+.command-icon-list__svg {
   width: 20px;
   height: 20px;
   fill: currentColor;
 }
-
-.item-command-icon:not(:last-child) {
+.command-icon-list__item:not(:last-child) {
   margin-right: 10px;
-}
-
-.link-command-icon:hover,
-.link-command-icon:focus {
-  background-color: #2196f3;
-  color: #ffffff;
 }

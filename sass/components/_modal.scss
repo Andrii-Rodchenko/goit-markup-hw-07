@@ -33,17 +33,19 @@
   visibility: visible;
 }
 
-.svg-close-black {
+.modal-button__svg-close {
   fill: black;
   transition: fill var(--transition-duration-timing-function);
+.modal-button:hover > & {
+  fill: #2196f3;
+}
 }
 
-.modal-button:hover > .svg-close-black {
-  fill: #2196f3;
+.modal__modal-button {
+position: absolute;
 }
 
 .modal-button {
-  position: absolute;
   top: 8px;
   right: 8px;
   display: flex;
@@ -58,7 +60,7 @@
   z-index: 1;
 }
 
-/* modal form */
+// modal form 
 
 .modal-form {
   width: 100%;
@@ -97,7 +99,7 @@
   margin-bottom: 12px;
 }
 
-.modal-input {
+.form-feild__input {
   display: inline-block;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -107,16 +109,23 @@
   padding: 0 0 0 42px;
   transition: border var(--transition-duration-timing-function);
   margin-top: 4px;
+  &:focus {
+  outline: none;
+  border: 1px solid #2196f3;
+}
 }
 
-.icon-black {
+.form-feild__icon {
   position: absolute;
   left: 12px;
   bottom: 11px;
   transition: fill var(--transition-duration-timing-function);
+.form-feild__input:focus + & {
+  fill: #2196f3;
+}
 }
 
-.form-comment {
+.comment-feild__text {
   display: inline-block;
   resize: none;
   width: 100%;
@@ -128,8 +137,12 @@
   padding: 12px 16px;
   transition: border var(--transition-duration-timing-function);
   margin-top: 4px;
+  &:focus {
+  outline: none;
+  border: 1px solid #2196f3;
 }
-.checkbox-link {
+}
+.agreement-field__checkbox-link {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.03em;
@@ -166,7 +179,7 @@
   margin: -1px;
 }
 
-.checkbox-label {
+.agreement-field__label {
   position: relative;
   display: flex;
   justify-content: center;
@@ -192,7 +205,7 @@
   border: 2px solid #212121;
 }
 
-.checkbox:checked + .icon-checkbox {
+.agreement-field__checkbox:checked + .icon-checkbox {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,11 +219,5 @@
   border: 0;
 }
 
-.modal-input:focus + .icon-black {
-  fill: #2196f3;
-}
-.modal-input:focus,
-.form-comment:focus {
-  outline: none;
-  border: 1px solid #2196f3;
-}
+
+
