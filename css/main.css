@@ -79,7 +79,7 @@ a {
   color: var(--interactive-element-color);
 }
 
-.open-page::after {
+.nav-list__link--active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -92,7 +92,7 @@ a {
   background-color: #2196f3;
 }
 
-.nav-item {
+.nav-list__item {
   position: relative;
 }
 
@@ -129,11 +129,11 @@ a {
   margin-left: 93px;
 }
 
-.nav-list .nav-item:not(:last-child) {
+.nav-list__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.list-contact .item-contact + .item-contact {
+.list-contact .list-contact__item + .list-contact__item {
   margin-left: 50px;
 }
 
@@ -148,7 +148,7 @@ a {
   margin-left: auto;
 }
 
-.nav-link {
+.nav-list__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -161,16 +161,15 @@ a {
   transition: color var(--transition-duration-timing-function);
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.nav-list__link:hover, .nav-list__link:focus {
   color: var(--interactive-element-color);
 }
 
-.open-page {
+.nav-list__link--active {
   color: var(--interactive-element-color);
 }
 
-.link-contact {
+.list-contact__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,13 +187,12 @@ a {
   transition: color var(--transition-duration-timing-function);
 }
 
-.link-contact:hover,
-.link-contact:focus {
+.list-contact__link:hover, .list-contact__link:focus {
   color: var(--interactive-element-color);
 }
 
-.link-contact-mail,
-.link-contact-tel {
+.list-contact__icon-mail,
+.list-contact__icon-tel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,7 +335,7 @@ a {
   color: var(--title-text-color);
 }
 
-.our-work__item {
+.our-work-list__item {
   position: relative;
 }
 
@@ -360,14 +358,14 @@ a {
   color: #ffffff;
 }
 
-.our-work__list {
+.our-work-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-left: 0;
 }
 
-.our-work__list .our-work__item:not(:last-child) {
+.our-work-list .our-work-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -797,12 +795,18 @@ a {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.link-achievements {
+.section-achievements__link {
   display: block;
-  -webkit-transition: -webkit-box-shadow var(--transition-duration-timing-function);
-  transition: -webkit-box-shadow var(--transition-duration-timing-function);
-  transition: box-shadow var(--transition-duration-timing-function);
-  transition: box-shadow var(--transition-duration-timing-function), -webkit-box-shadow var(--transition-duration-timing-function);
+}
+
+.section-achievements__link:hover, .section-achievements__link:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.container__section-achievements {
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .section-achievements {
@@ -812,22 +816,14 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-left: 0;
-  margin-top: -30px;
-  margin-left: -30px;
 }
 
-.section-achievements > .item-descriptionte {
+.section-achievements > .section-achievements__descriptionte {
   margin-top: 30px;
   margin-left: 30px;
   -ms-flex-preferred-size: calc(100% / 3 - 30px);
       flex-basis: calc(100% / 3 - 30px);
   list-style: none;
-}
-
-.link-achievements:hover,
-.link-achievements:focus {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .descriptionte-achievements {
@@ -853,7 +849,6 @@ a {
   color: var(--title-text-color);
 }
 
-/* Overlay */
 .thumb-overlay {
   position: relative;
   max-width: 370px;
@@ -861,7 +856,7 @@ a {
   overflow: hidden;
 }
 
-.text-overlay {
+.thumb-overlay__text {
   position: absolute;
   top: 0;
   left: 0;
@@ -881,7 +876,7 @@ a {
   transition: transform var(--transition-duration-timing-function), -webkit-transform var(--transition-duration-timing-function);
 }
 
-.link-achievements:hover .text-overlay {
+.section-achievements__link:hover .thumb-overlay__text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
